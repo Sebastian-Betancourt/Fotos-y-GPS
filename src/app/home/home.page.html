@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fotos con Ubicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="takePhoto()">Tomar Foto</ion-button>
+  <ion-button expand="block" color="success" (click)="downloadTxt()">Descargar archivo .txt</ion-button>
+
+  <ion-card *ngFor="let photo of photos()">
+    <img [src]="photo.webviewPath" *ngIf="photo.webviewPath">
+    <ion-card-content>
+      <p><strong>Latitud:</strong> {{ photo.latitude }}</p>
+      <p><strong>Longitud:</strong> {{ photo.longitude }}</p>
+      <a [href]="photo.mapsLink" target="_blank">Ver en Google Maps</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

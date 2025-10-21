@@ -1,0 +1,7 @@
+{
+  "name": "MiUbicacionApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
